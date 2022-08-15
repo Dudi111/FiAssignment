@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S."
+        android:textSize="30sp"
+        android:textFontWeight="900"
+        android:textColor="#F60808"
+        android:padding="25dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_view1"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First of the few steps to set You up with a bank account"
+        android:textSize="20sp"
+        android:textFontWeight="900"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:id="@+id/tv_view2"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAN NUMBER"
+        android:textSize="15sp"
+        android:textFontWeight="900"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="55dp"
+        android:textColor="#514D4D"
+        android:layout_marginStart="25dp"
+        android:id="@+id/tv_panno."
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view2" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_panno."
+        android:id="@+id/et_pan"
+
+        android:hint="Enter PAN number"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_bg"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIRTHDATE"
+        android:textSize="15sp"
+        android:textFontWeight="900"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#514D4D"
+        android:layout_marginStart="25dp"
+        android:id="@+id/tv_birthdate"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pan" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_linear"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_birthdate"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_date"
+                android:inputType="number"
+                android:padding="5dp"
+                android:hint="Date"
+                android:maxLength="2"
+                android:background="@drawable/small_bg"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_month"
+                android:padding="5dp"
+                android:hint="Month"
+                android:inputType="number"
+                android:maxLength="2"
+                android:background="@drawable/small_bg"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_year"
+                android:padding="5dp"
+                android:hint="Year"
+
+                android:inputType="number"
+                android:maxLength="4"
+                android:background="@drawable/small_bg"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Providing PAN and Date of birth helps us find and fetch your KYC from a central registry by the Government of India."
+        android:textSize="14sp"
+        android:textFontWeight="900"
+       android:layout_marginTop="60dp"
+        android:textColor="#737070"
+
+        android:id="@+id/tv_discp"
+        android:textStyle="bold"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_linear" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_discp"
+        app:layout_constraintTop_toBottomOf="@+id/main_linear"
+
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:id="@+id/learn_more"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_discp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:id="@+id/btn_next"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next"
+
+        android:text="I don't have PAN"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:id="@+id/tv_noPAN"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
