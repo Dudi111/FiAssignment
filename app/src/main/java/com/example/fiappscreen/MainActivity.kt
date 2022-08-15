@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         varifyViewmodel.panLivedata.observe(this){
             checkpan = it
 
+
             if (checkpan && checkdob){
                 Toast.makeText(this, "Details submitted Successfully", Toast.LENGTH_SHORT).show()
                 finish()
@@ -60,6 +61,13 @@ class MainActivity : AppCompatActivity() {
         varifyViewmodel.dobLivedata.observe(this){
             checkdob = it
 
+            if (!checkpan){
+                Toast.makeText(this, "Invalid PAN number", Toast.LENGTH_SHORT).show()
+
+            }else if (!checkdob){
+                Toast.makeText(this, "Invalid date of birth", Toast.LENGTH_SHORT).show()
+
+            }
             if (checkpan && checkdob){
                 Toast.makeText(this, "Details submitted Successfully", Toast.LENGTH_SHORT).show()
                 finish()
