@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         varifyViewmodel= ViewModelProvider(this).get(VarificationViewModel::class.java)
 
         var starttext= "First of the few steps to set You up with a bank account"
